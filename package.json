@@ -7,10 +7,10 @@
   "author": "Alex Alonso <alex4551@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p .",
-    "test:javascript": "mocha",
+    "build":"rm -rf dist && webpack --config webpack.config.js --progress --profile --bail",
     "test": "mocha --opts ./mocha.es6.opts",
-    "test:typescript": "mocha --opts ./mocha.ts.opts",
+    "test:js": "mocha",
+    "test:ts": "mocha --opts ./mocha.ts.opts",
     "test:coverage": "nyc yarn test",
     "test:coverage:showReport": "yarn test:coverage && open coverage/index.html",
     "test:coveralls": "yarn test:coverage | coveralls",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
+    "awesome-typescript-loader": "^3.2.1",
     "babel-core": "^6.25.0",
     "chai": "^4.1.0",
     "coveralls": "^2.13.1",
@@ -26,7 +27,10 @@
     "nyc": "^11.0.3",
     "ts-node": "^3.2.0",
     "tslint": "^5.5.0",
-    "typescript": "^2.4.1"
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.4.1",
+    "webpack": "^3.3.0",
+    "babel-preset-es2015": "^6.24.1"
   },
   "nyc": {
     "include": [
@@ -49,8 +53,5 @@
     ],
     "sourceMap": true,
     "instrument": true
-  },
-  "dependencies": {
-    "babel-preset-es2015": "^6.24.1"
   }
 }

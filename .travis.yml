@@ -9,8 +9,8 @@ script:
   - yarn test:coveralls
   - yarn build
   - yarn test
-  - yarn test:javascript
-  - yarn test:typescript
+  - yarn test:js
+  - yarn test:ts
 cache:
   yarn: true
   directories:
