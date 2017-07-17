@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc -p .",
     "test:javascript": "mocha",
-    "test:es6": "mocha --opts ./mocha.es6.opts",
+    "test": "mocha --opts ./mocha.es6.opts",
     "test:typescript": "mocha --opts ./mocha.ts.opts",
     "test:coverage": "nyc yarn test",
     "test:coverage:showReport": "yarn test:coverage && open coverage/index.html",
