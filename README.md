@@ -1,1 +1,1 @@
-# port-validator
+# port-validator [![Build Status](https://travis-ci.org/FinalDes/port-validator.svg?branch=master)](https://travis-ci.org/FinalDes/port-validator) [![Coverage Status](https://coveralls.io/repos/github/FinalDes/port-validator/badge.svg?branch=master)](https://coveralls.io/github/FinalDes/port-validator?branch=master)
