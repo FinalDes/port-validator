@@ -1,4 +1,4 @@
-export class PortValidator {
+export default class PortValidator {
     public static validate(port: any, alternative?: number): number {
         let result = alternative ? alternative : -1;
         port = parseInt(port, 10);

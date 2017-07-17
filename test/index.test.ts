@@ -1,11 +1,11 @@
 import "mocha";
-import { PortValidator } from "./index";
+import PortValidator from "../src/index";
 import should = require("chai");
 
 should.should();
 const alternative = 3000;
 
-describe("Validate Port Number", () => {
+describe("Validate Port Number using typescript", () => {
     it("alternative port number should be valid", () => {
         PortValidator.validate(alternative).should.be.equal(alternative);
     });

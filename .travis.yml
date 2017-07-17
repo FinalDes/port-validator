@@ -7,6 +7,8 @@ script:
   - yarn
   - yarn tslint
   - yarn test:coveralls
+  - yarn build
+  - yarn test:javascript
 cache:
   yarn: true
   directories:

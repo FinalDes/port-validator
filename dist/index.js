@@ -13,4 +13,4 @@ var PortValidator = (function () {
     };
     return PortValidator;
 }());
-exports.PortValidator = PortValidator;
+exports.default = PortValidator;
