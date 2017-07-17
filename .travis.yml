@@ -6,11 +6,11 @@ node_js:
 script:
   - yarn
   - yarn tslint
-  - yarn test:coveralls
   - yarn build
   - yarn test
   - yarn test:js
   - yarn test:ts
+  - yarn test:coveralls
 cache:
   yarn: true
   directories:

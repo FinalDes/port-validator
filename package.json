@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "build":"rm -rf dist && webpack --config webpack.config.js --progress --profile --bail",
-    "test": "mocha --opts ./mocha.es6.opts",
+    "test": "mocha --opts ./mocha.opts",
+    "test:es6": "mocha --opts ./mocha.es6.opts",
     "test:js": "mocha",
     "test:ts": "mocha --opts ./mocha.ts.opts",
     "test:coverage": "nyc yarn test",
