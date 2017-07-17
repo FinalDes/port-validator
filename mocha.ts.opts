@@ -1,2 +1,2 @@
 --compilers ts:ts-node/register
-test/**/*.test.ts
+test/index.test.ts

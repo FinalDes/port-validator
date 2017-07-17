@@ -8,8 +8,9 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p .",
-    "test": "mocha --opts ./mocha.opts",
-    "test:javascript": "mocha ./test/index.test.js",
+    "test:javascript": "mocha",
+    "test:es6": "mocha --opts ./mocha.es6.opts",
+    "test:typescript": "mocha --opts ./mocha.ts.opts",
     "test:coverage": "nyc yarn test",
     "test:coverage:showReport": "yarn test:coverage && open coverage/index.html",
     "test:coveralls": "yarn test:coverage | coveralls",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
+    "babel-core": "^6.25.0",
     "chai": "^4.1.0",
     "coveralls": "^2.13.1",
     "mocha": "^3.4.2",
@@ -47,5 +49,8 @@
     ],
     "sourceMap": true,
     "instrument": true
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1"
   }
 }
