@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - node
+  - "6"
+script:
+  - yarn
+  - yarn tslint
+  - yarn test:coveralls
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
