@@ -1,2 +1,3 @@
---compilers ts:ts-node/register
-test/index.test.ts
+--require ts-node/register
+--watch-extensions ts
+test/index.spec.ts
