@@ -1,12 +1,12 @@
 const path = require("path");
-const webpack = require("webpack");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
+  mode: 'production',
   target: "node",
   entry: "./src/index.ts",
   output: {
     filename: "index.js",
-    libraryTarget: 'commonjs2',
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
@@ -33,6 +33,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin()
+    new CleanWebpackPlugin(['dist']),
   ]
 };
