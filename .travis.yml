@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - node
+  - "node"
+  - "lts/*"
+  - "10"
+  - "8"
   - "6"
   - "4"
 script:
