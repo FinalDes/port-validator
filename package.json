@@ -14,7 +14,7 @@
     "test:ts": "mocha --opts ./mocha.ts.opts",
     "test:coverage": "nyc --reporter=text mocha ",
     "test:coverage:showReport": "yarn test:coverage && open coverage/index.html",
-    "test:coveralls": "yarn report --reporter=text-lcov | coveralls",
+    "test:coveralls": "nyc --reporter=text-lcov mocha| coveralls",
     "tslint": "tslint -c tslint.json -p tsconfig.json 'src/**/*.ts'"
   },
   "devDependencies": {
