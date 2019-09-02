@@ -12,9 +12,9 @@
     "test:es6": "mocha --opts ./mocha.es6.opts",
     "test:js": "mocha",
     "test:ts": "mocha --opts ./mocha.ts.opts",
-    "test:coverage": "nyc yarn test",
+    "test:coverage": "nyc --reporter=text mocha ",
     "test:coverage:showReport": "yarn test:coverage && open coverage/index.html",
-    "test:coveralls": "yarn test:coverage | coveralls",
+    "test:coveralls": "yarn report --reporter=text-lcov | coveralls",
     "tslint": "tslint -c tslint.json -p tsconfig.json 'src/**/*.ts'"
   },
   "devDependencies": {
